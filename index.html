@@ -28,13 +28,21 @@
 		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 		<script>
-			document.ontouchmove = function(event)
+			function load()
 			{
-    				event.preventDefault();
+				var c = confirm("By pressing okay you agree to our terms and conditions.");
+				if(c == true)
+				{
+					alert("Thank you for choosing GeneCalc");
+				}
+				else
+				{
+					window.location.assign("http://www.roshanlodha.me")
+				}
 			}
 		</script>
 	</head>
-	<body class="landing">
+	<body class="landing" onload="load()">
 		<div id="page-wrapper">
 		<!-- Header -->
 				<header id="header">
